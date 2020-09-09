@@ -33,7 +33,7 @@ export default {
       try {
         await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
         console.log(db)
-        await this.$router.replace({ name: 'Secret' })
+        await this.$router.replace({ name: 'Wall' })
       } catch (err) {
         console.log(err)
       }

@@ -3,6 +3,9 @@
     <div v-if="error" class="error">{{error.message}}</div>
     <form @submit.prevent="pressed">
       Register
+      <div class="name">
+        <input type="text" v-model="name" placeholder="Ingrese nombre">
+      </div>
       <div class="email">
         <input type="email" v-model="email" placeholder="email">
       </div>
@@ -23,15 +26,21 @@ export default {
     return {
       email: '',
       password: '',
-      error: ''
+      error: '',
+      name: ''
     }
   },
   methods: {
     async pressed () {
       try {
-        await firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+        await firebase
+          .auth()
+          .createUserWithEmailAndPassword(this.email, this.password)
+          .then(result => {
+            return result.user.updateProfile({ displayName: this.name })
+          })
         console.log(db)
-        await this.$router.replace({ name: 'Secret' })
+        await this.$router.replace({ name: 'Wall' })
       } catch (err) {
         console.log(err)
       }

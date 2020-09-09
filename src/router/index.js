@@ -31,9 +31,9 @@ const routes = [
     component: () => import('../views/Login.vue')
   },
   {
-    path: '/secret',
-    name: 'Secret',
-    component: () => import('../views/Secret.vue'),
+    path: '/wall',
+    name: 'Wall',
+    component: () => import('../views/Wall.vue'),
     meta: { requiresAuth: true }
   }
 ]

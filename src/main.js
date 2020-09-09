@@ -17,7 +17,9 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 console.log(db)
+
 firebase.auth().onAuthStateChanged(user => {
+  // store.state.usuario = user
   new Vue({
     router,
     store,

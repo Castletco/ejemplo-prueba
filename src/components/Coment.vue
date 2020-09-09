@@ -1,12 +1,12 @@
 <template>
   <div>
-    Secret
+    Comentario
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Secret'
+  name: 'Coment'
 }
 </script>
 
