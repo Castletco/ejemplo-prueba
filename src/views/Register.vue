@@ -40,7 +40,7 @@ export default {
             return result.user.updateProfile({ displayName: this.name })
           })
         console.log(db)
-        await this.$router.replace({ name: 'Wall' })
+        await this.$router.replace({ name: 'Game' })
       } catch (err) {
         console.log(err)
       }

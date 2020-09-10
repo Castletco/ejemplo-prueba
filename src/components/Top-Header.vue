@@ -1,10 +1,14 @@
 <template>
   <div>
-    Logged in
-    <span v-if="loggedIn">Yes</span>
-    <span v-else>No</span>
-    <div class="button">
-      <button @click="signOut">Sign Out</button>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/question">Add a Question</router-link> |
+      Logged in
+      <span v-if="loggedIn">Yes</span>
+      <span v-else>No</span>
+      <div class="button">
+        <button @click="signOut">Sign Out</button>
+      </div>
     </div>
   </div>
 </template>

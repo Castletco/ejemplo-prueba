@@ -3,10 +3,10 @@
     <top-header></top-header>
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+      <router-link to="/question">Add a Question</router-link> |
+      <router-link to="/game">Game</router-link> |
       <router-link to="/login">Login</router-link> |
-      <router-link to="/register">Registro</router-link> |
-      <router-link to="/wall">Wall</router-link>
+      <router-link to="/register">Register</router-link>
     </div>
     <router-view/>
   </div>
